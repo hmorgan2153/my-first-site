@@ -1,0 +1,46 @@
+body{
+  background-image: url(background_image.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+h1{
+  text-align: center;
+  font-family: "Arial Black", Gadget, sans-serif;
+}
+
+header {
+    background-color:#3B0B39;
+    color:white;
+    text-align:center;
+    padding-top: 5px;
+    padding-bottom: 15px;
+}
+
+nav{
+    line-height:30px;
+    background-color:#eeeeee;
+    height:550px;
+    width:200px;
+    float:left;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+a:link {
+  color:#732C7B;
+}
+
+footer {
+    background-color:#3B0B39;
+    color:white;
+    clear:both;
+    text-align:center;
+    padding:5px;
+}
+
+section {
+    float:left;
+    padding:10px;
+}
