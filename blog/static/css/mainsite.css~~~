@@ -1,0 +1,61 @@
+body{
+  background-color: #D3D3D3
+}
+
+
+h1{
+  text-align: center;
+  font-family: "Arial Black", Gadget, sans-serif;
+}
+
+header {
+    background-color:#3B0B39;
+    color:white;
+    text-align:center;
+    padding-top: 5px;
+    padding-bottom: 15px;
+}
+
+nav{
+    line-height:30px;
+    background-color:#eeeeee;
+    height:550px;
+    width:200px;
+    float:left;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+a:link {
+  color:#732C7B;
+}
+
+footer {
+    background-color:#3B0B39;
+    color:white;
+    clear:both;
+    text-align:center;
+    padding:5px;
+}
+
+section {
+    float:left;
+    padding:10px;
+}
+
+#slideshow {
+    margin: 50px auto;
+    position: relative;
+    width: 240px;
+    height: 240px;
+    padding: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+
+#slideshow > div {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+}

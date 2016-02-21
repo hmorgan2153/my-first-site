@@ -3,8 +3,32 @@ from django.utils import timezone
 from .models import Post
 from django.shortcuts import render, get_object_or_404
 from .forms import PostForm
+from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import redirect
-import datetime
+
+def Project_M(request):
+    return render(request, 'blog/Project_M.html', {})
+
+def Data_Q(request):
+    return render(request, 'blog/Data_Q.html', {})
+
+def Master_Data(request):
+    return render(request, 'blog/Master_Data.html', {})
+
+def BI_MI(request):
+    return render(request, 'blog/BI_MI.html', {})
+
+def Data_Architecture(request):
+    return render(request, 'blog/Data_Architecture.html', {})
+
+def big_data(request):
+    return render(request, 'blog/big_data.html', {})
+
+def dcmain(request):
+    return render(request, 'blog/dcmain.html', {})
+
+def general(request):
+    return render(request, 'blog/general.html', {})
 
 def post_list(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
@@ -40,7 +64,3 @@ def post_edit(request, pk):
     else:
         form = PostForm(instance=post)
     return render(request, 'blog/post_edit.html', {'form': form})
-
-def general(request):
-    time = datetime.datetime.now()
-    return render(request, 'blog/templates/blog/general.html', {})

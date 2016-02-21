@@ -1,3 +1,4 @@
+
 body{
   background-image: url(grey_background.png);
   background-repeat:repeat;
@@ -16,21 +17,23 @@ h5 {
   font-size: 150%;
 }
 
-ul {
+ul.nav_item {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
     background-color: rgba(0,0,0,0.3);
     float; right;
+    padding-right: 25px;
 }
 
-li {
+
+li.nav_item {
     float: right;
     display: inline;
 }
 
-li a {
+li.nav_item a {
     display: block;
     color: white;
     text-align: center;
@@ -38,7 +41,7 @@ li a {
     text-decoration: none;
 }
 
-li a:hover {
+li.nav_item a:hover {
     background-color: #000000;
     color: white;
 }
@@ -65,7 +68,7 @@ img {
 
 footer {
   height: 30px;
-  width: 50%;
+  width: 70.3%;
   background-color: rgba(0,0,0,0.3);
   color: white;
   text-align: center;
@@ -73,3 +76,5 @@ footer {
   position: fixed;
   margin-top: 10px;
 }
+
+ul.b {list-style-type: square;}
