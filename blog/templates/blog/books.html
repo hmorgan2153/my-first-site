@@ -1,0 +1,35 @@
+{% load staticfiles %}
+<html>
+    <head>
+        <title> NMAM Ltd. </title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="{% static 'css/books.css' %}">
+        <link rel="shortcut icon" href="http://sstatic.net/stackoverflow/img/favicon.ico">
+    </head>
+    <body>
+      <h1>NMAM</h1>
+      <h5>Solid and Professional</h5>
+      <nav>
+          <ul class='nav_item'>
+            <li class='nav_item'><a href="url">Contact</a></li>
+            <li class='nav_item'><a href="books.html">Books</a></li>
+            <li class='nav_item'><a href="url">Home</a></li>
+          </ul>
+      </nav>
+      <section>
+          <div>
+            <p>published: {{ post.published_date }}</p>
+            <h2><a href="">{{ post.title }}</a></h1>
+          </div>
+          <div>
+            <p>published: {{ post.published_date }}</p>
+            <h2><a href="">{{ post.title }}</a></h1>
+          </div>
+      </section>
+      <footer>
+          Copyright © NMAM Ltd. All rights reserved.
+      </footer>
+</body>
+</html>

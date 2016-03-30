@@ -1,0 +1,47 @@
+{% load staticfiles %}
+<html>
+    <head>
+        <title> NMAM Ltd. </title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="{% static 'css/DC.css' %}">
+        <link rel="shortcut icon" href="http://sstatic.net/stackoverflow/img/favicon.ico">
+    </head>
+    <body>
+      <h1>NMAM</h1>
+      <h5>Solid and Professional</h5>
+      <div class="page-header">
+          {% if user.is_authenticated %}
+          <a href="{% url 'books' %}" class="top-menu"><span class="glyphicon glyphicon-edit"></span></a>
+          <p class="top-menu">Hello {{ user.username }}<small>(<a href="{% url 'django.contrib.auth.views.logout' %}">Log out</a>)</small></p>
+          {% else %}
+          <a href="{% url 'django.contrib.auth.views.login' %}" class="top-menu"><span class="glyphicon glyphicon-lock"></span></a>
+          {% endif %}
+      </div>
+      <div class="content">
+          <div class="row">
+              <div class="col-md-8">
+              {% block content %}
+              {% endblock %}
+              </div>
+          </div>
+      </div>
+      <nav>
+          <ul class='nav_item'>
+            <li class='nav_item'><a href="url">Contact</a></li>
+            <li class='nav_item'><a href="books.html">Books</a></li>
+            <li class='nav_item'><a href="url">Home</a></li>
+          </ul>
+      </nav>
+      <section>
+            <p>Welcome to the webpages of the publishing group of NMAM Ltd. We aim to publish high quality novels,
+              novellas and game material related to the stories. <br> On the following pages you vam find details
+              and extracts from our latest publishing projects and some early ideas for game spin offs of these stories.</p>
+            <p>For further information and/or to arrange to talk with someone from NMAM Publishing click on <a href="url">here</a>. </p>
+      </section>
+      <footer>
+          Copyright © NMAM Ltd. All rights reserved.
+      </footer>
+</body>
+</html>

@@ -1,10 +1,21 @@
 from django.shortcuts import render
 from django.utils import timezone
-from .models import Post
 from django.shortcuts import render, get_object_or_404
 from .forms import PostForm
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import redirect
+from django.contrib import auth
+from django.core.context_processors import csrf
+from .forms import *
+from .models import *
+from django.contrib.auth.decorators import login_required
+
+@login_required
+def books(request):
+    return render(request, 'blog/books.html', {})
+
+def PSmain(request):
+    return render(request, 'blog/PSmain.html', {})
 
 def Project_M(request):
     return render(request, 'blog/Project_M.html', {})
